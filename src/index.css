@@ -193,55 +193,32 @@ img {
   justify-content: space-between;
 }
 
-.logo {}
-
-.footer__logo {}
-
-.logo-img {}
-
-.nav {}
-
-.footer__nav {}
-
-.menu {}
-
-.footer__menu {}
-
-.menu-item {}
-
-.footer__menu-item {}
-
-.menu-link {}
-
-.footer__menu-link {}
-
 .footer__info {
   font-size: 16px;
 }
 
 .footer__copyright {
-  font-size: 16px;
   margin-bottom: 17px;
 }
 
-.footer__description {}
-
-.footer__developers {}
-
-.footer__developer {
+.footer__description {
   margin-bottom: 3px;
 }
 
-.footer__developer-link {}
+.footer__developer:first-child {
+  margin-bottom: 3px;
+}
 
 .footer__contacts {}
 
-.footer__email {}
+.footer__email {
+  display: inline-block;
+  margin-bottom: 16px;
+}
 
 .social {
   display: flex;
   gap: 12px;
-  margin-top: 16px;
 }
 
 .footer__social {}
