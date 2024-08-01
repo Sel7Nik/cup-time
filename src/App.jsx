@@ -1,7 +1,13 @@
+import { Footer } from './modules/Footer'
+import { Header } from './modules/Header'
+import { Main } from './modules/Main'
+
 function App() {
   return (
     <>
-      <p className="hello">Vite and React</p>
+      <Header />
+      <Main />
+      <Footer />
     </>
   )
 }
