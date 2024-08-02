@@ -2,7 +2,7 @@ export const Header = () => {
   return (
     <header className="header">
       <div className="container header__container">
-        <a className="logo">
+        <a className="logo header__logo">
           <img className="logo-img" src="images/logo.svg" alt="logo-svg Cup Time" />
         </a>
 
