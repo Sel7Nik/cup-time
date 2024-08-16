@@ -1,0 +1,2 @@
+отключение валидации props
+eslint.config.js > rules:{"react/prop-types": "off"}
