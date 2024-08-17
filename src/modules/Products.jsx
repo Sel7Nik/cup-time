@@ -21,19 +21,19 @@ const Products = () => {
       price: 380,
     },
     {
-      id: 3,
+      id: 4,
       img: 'images/photo-5.jpg',
       title: 'Черный чай из Калифорнии',
       price: 360,
     },
     {
-      id: 3,
+      id: 5,
       img: 'images/photo-4.jpg',
       title: 'Органическая веганская матча',
       price: 400,
     },
     {
-      id: 3,
+      id: 6,
       img: 'images/photo-3.jpg',
       title: 'Чай черный Лакандона',
       price: 390,

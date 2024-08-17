@@ -1,3 +1,50 @@
 /* & $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 /* &   a d a p t i v e   $  a d a p t i v e  $  a d a p t i v e  $  a d a p t i v e    $ */
 /* & $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+/* ! $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+/* ! max-width: 1300px  to 1024px  */
+/* ! $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+@media(max-width:1300px) {
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 42px;
+  }
+
+  .header {
+    position: absolute;
+    top: 20px;
+  }
+
+  .header__container {
+    max-width: 984px;
+    padding: 12px 22px;
+  }
+
+  .promo__container {
+    padding-top: 172px;
+    padding-bottom: 60px;
+    background-image: url('images/bg-img-notebook.png');
+    background-repeat: no-repeat;
+    background-position: right 48px bottom;
+  }
+
+  .promo__title {
+    max-width: 620px;
+    font-size: 70px;
+    margin-bottom: 40px;
+  }
+
+  .product {
+    min-height: 450px;
+  }
+
+  .footer__menu {
+    gap: 32px;
+  }
+}
+
+/* ! $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+/* ! max-width: 940px  to 768px    */
+/* ! $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
