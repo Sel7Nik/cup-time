@@ -202,7 +202,7 @@ input[type="number"] {
 .product__title {
   flex-grow: 1;
   font-size: 24px;
-  margin-bottom: 4px;
+  margin-bottom: 12px;
   /* скрытие длинных строк */
   overflow: hidden;
   text-overflow: ellipsis;
@@ -224,7 +224,7 @@ input[type="number"] {
 .footer__container {
   display: grid;
   grid-template-columns: repeat(2, max-content);
-  gap: 38px;
+  gap: 40px;
   justify-content: space-between;
 }
 
