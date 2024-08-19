@@ -205,8 +205,8 @@
   }
 
   .footer__container {
-    grid-template-columns: repeat(1, max-content);
-    justify-content: space-between;
+    grid-template-columns: 1fr;
+
   }
 }
 
