@@ -1,7 +1,16 @@
 import Product from './Product'
-import { productsList } from '../productsList'
+import { useProducts } from '../context/productContext'
+import { useEffect } from 'react'
 
-const Products = () => {
+export const Products = () => {
+  const category = 'tea'
+  const { products, setCategory } = useProducts()
+  const productsList = products
+
+  useEffect(() => {
+    setCategory(category)
+    return () => {}
+  }, [category, setCategory])
   return (
     <section className="products">
       <div className="container">
@@ -15,5 +24,3 @@ const Products = () => {
     </section>
   )
 }
-
-export default Products
