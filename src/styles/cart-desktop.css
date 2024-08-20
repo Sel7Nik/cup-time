@@ -19,7 +19,6 @@
   font-size: 54px;
   line-height: 1.1;
   color: #64099b;
-  margin-bottom: 32px;
 }
 
 .cart__list {
@@ -45,12 +44,10 @@
   font-size: 20px;
   margin-bottom: 8px;
   /* скрытие длинных строк */
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
-  line-clamp: 1;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
+  width: 100%;
 }
 
 .cart-item__quantity {
@@ -141,7 +138,6 @@
 }
 
 .order__input::placeholder {
-
   color: #b8b8b8;
 }
 
@@ -151,7 +147,7 @@
 }
 
 .order__payment {
-  margin: 32px 0 0;
+  margin: 12px 0 0;
   padding: 0;
   border: none;
 }
@@ -170,5 +166,3 @@
 .order__payment-label:last-child {
   margin-bottom: 0px;
 }
-
-.order__radio {}
