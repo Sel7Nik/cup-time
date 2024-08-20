@@ -1,11 +1,13 @@
 import Product from './Product'
 import { useProducts } from '../context/productContext'
 import { useEffect } from 'react'
+import { useSearchParams } from 'react-router-dom'
 
 export const Products = () => {
-  const category = 'tea'
   const { products, setCategory } = useProducts()
+  const [searchParams] = useSearchParams()
   const productsList = products
+  const category = searchParams.get('category')
 
   useEffect(() => {
     setCategory(category)
