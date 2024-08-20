@@ -8,7 +8,6 @@ export const ProductProvider = ({ children }) => {
   const [category, setCategory] = useState('')
 
   useEffect(() => {
-    console.log(category)
     if (category) {
       fetch(`${API_URL}/api/products/${category}`)
         .then((response) => {
