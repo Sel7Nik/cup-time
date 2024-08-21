@@ -19,7 +19,7 @@ export const Products = () => {
       <div className="container">
         <h2 className="products__title">Чай</h2>
         <ul className="products__list">
-          {!productsList.length ? (
+          {productsList.length ? (
             productsList.map((item) => {
               return <Product key={item.id} props={item} />
             })
