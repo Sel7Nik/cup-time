@@ -19,7 +19,6 @@ export const ProductProvider = ({ children }) => {
         .then((data) => setProducts(data))
         .catch((error) => console.error('Error fetching products: ', error))
     }
-    // return () => {}
   }, [category])
 
   return <ProductContext.Provider value={{ products, setCategory }}>{children}</ProductContext.Provider>

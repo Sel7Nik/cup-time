@@ -6,14 +6,14 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState(null)
 
   useEffect(() => {
-    const storeCart = JSON.parse(localStorage.getItem('cart') || '[]')
+    const storeCart = JSON.parse(localStorage.getItem('keyCart') || '[]')
     setCart(storeCart)
     return () => {}
   }, [])
 
   useEffect(() => {
     if (Array.isArray(cart)) {
-      localStorage.setItem('cart', JSON.stringify(cart))
+      localStorage.setItem('keyCart', JSON.stringify(cart))
     }
   }, [cart])
 
@@ -35,7 +35,7 @@ export const CartProvider = ({ children }) => {
     if (quantity <= 0) {
       removeFromCart(productId)
     } else {
-      setCart(cart.map((item) => (item.id !== productId ? { ...item, quantity } : item)))
+      setCart(cart.map((item) => (item.id === productId ? { ...item, quantity } : item)))
     }
   }
   return (

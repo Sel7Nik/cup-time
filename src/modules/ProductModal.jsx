@@ -1,7 +1,7 @@
 import Modal from 'react-modal'
 import { API_URL } from '../../const'
 import { useState } from 'react'
-import { useCart } from '../context/cartContext'
+import { useCart } from '../context/CartContext'
 const customStyles = {
   content: {
     top: '50%',

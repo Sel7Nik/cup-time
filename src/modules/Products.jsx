@@ -1,5 +1,5 @@
 import Product from './Product'
-import { useProduct } from '../context/productContext'
+import { useProduct } from '../context/ProductContext'
 import { useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { SkeletonLoader } from './SkeletonLoader'
