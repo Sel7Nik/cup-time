@@ -1,11 +1,11 @@
 import Product from './Product'
-import { useProducts } from '../context/productContext'
+import { useProduct } from '../context/productContext'
 import { useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { SkeletonLoader } from './SkeletonLoader'
 
 export const Products = () => {
-  const { products, setCategory } = useProducts()
+  const { products, setCategory } = useProduct()
   const [searchParams] = useSearchParams()
   const productsList = products
   const category = searchParams.get('category')

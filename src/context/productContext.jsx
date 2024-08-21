@@ -25,4 +25,4 @@ export const ProductProvider = ({ children }) => {
   return <ProductContext.Provider value={{ products, setCategory }}>{children}</ProductContext.Provider>
 }
 
-export const useProducts = () => useContext(ProductContext)
+export const useProduct = () => useContext(ProductContext)
