@@ -276,3 +276,8 @@ input[type="number"] {
   width: 26px;
   height: 26px;
 }
+
+.skeleton-wrapper {
+  width: 100px;
+  height: 600px;
+}

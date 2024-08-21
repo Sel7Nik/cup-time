@@ -42,6 +42,10 @@
   .footer__menu {
     gap: 32px;
   }
+
+  .skeleton-wrapper {
+    height: 450px;
+  }
 }
 
 /* ! $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
@@ -127,6 +131,10 @@
   .footer__email {
     font-size: 16px;
     margin-bottom: 12px;
+  }
+
+  .skeleton-wrapper {
+    height: 360px;
   }
 }
 
