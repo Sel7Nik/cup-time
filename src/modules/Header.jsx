@@ -55,7 +55,7 @@ export const Header = () => {
           </ul>
         </nav>
         <Link className="header__cart-link" to="/cart">
-          {cart.length}
+          {cart ? cart.length : 0}
         </Link>
       </div>
     </header>
