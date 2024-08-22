@@ -1,12 +1,17 @@
+import { Link, useSearchParams } from 'react-router-dom'
 const Promo = () => {
+  const [searchParams] = useSearchParams()
+  const category = searchParams.get('category')
   return (
     <section className="promo">
       <div className="container">
         <div className="promo__container">
           <h1 className="promo__title">Попробуй новый вкус Арабики</h1>
-          <a className="promo__link" href="#">
-            Перейти к кофе
-          </a>
+          {category !== 'coffee' ? (
+            <Link className="promo__link" to="/products?category=coffee">
+              Перейти к кофе
+            </Link>
+          ) : null}
         </div>
       </div>
     </section>

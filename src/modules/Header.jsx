@@ -1,16 +1,18 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
+import { useProduct } from '../context/ProductContext'
+// import { useState } from 'react'
 
 export const Header = () => {
   const location = useLocation()
   const { cart } = useCart()
+  const { categories } = useProduct()
 
   // const totalProducts = cart.length
-  const summaryProducts = cart.reduce((accum, item) => item.quantity + accum, 0)
+  const summaryProducts = cart ? cart.reduce((accum, item) => item.quantity + accum, 0) : 0
 
   const getActiveClass = (category) => {
     const currentCategory = new URLSearchParams(location.search).get('category')
-    // console.log('category: ', category)
     return currentCategory === category ? 'active' : ''
   }
   return (
@@ -21,44 +23,21 @@ export const Header = () => {
         </Link>
         <nav className="nav header__nav">
           <ul className="menu header__menu">
-            <li className="menu-item header__menu-item">
-              <Link className={`menu-link header__menu-link ${getActiveClass('tea')}`} to="/products?category=tea">
-                Чай
-              </Link>
-            </li>
-            <li className="menu-item header__menu-item">
-              <Link
-                className={`menu-link header__menu-link ${getActiveClass('coffee')}`}
-                to="/products?category=coffee"
-              >
-                Кофе
-              </Link>
-            </li>
-            <li className="menu-item header__menu-item">
-              <Link
-                className={`menu-link header__menu-link ${getActiveClass('teapots')}`}
-                to="/products?category=teapots"
-              >
-                Чайники
-              </Link>
-            </li>
-            <li className="menu-item header__menu-item">
-              <Link
-                className={`menu-link header__menu-link ${getActiveClass('cezves')}`}
-                to="/products?category=cezves"
-              >
-                Турки
-              </Link>
-            </li>
-            <li className="menu-item header__menu-item">
-              <Link className={`menu-link header__menu-link ${getActiveClass('other')}`} to="/products?category=other">
-                Прочее
-              </Link>
-            </li>
+            {Object.entries(categories).map(([key, value]) => (
+              <li key={key} className="header__menu-item menu-item">
+                <Link
+                  className={`header__menu-link menu-link ${getActiveClass(key)}`}
+                  to={`/products?category=${key}`}
+                  // onClick={closeMenu}
+                >
+                  {value}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
         <Link className="header__cart-link" to="/cart">
-          {cart ? summaryProducts : 0}
+          {summaryProducts}
         </Link>
       </div>
     </header>
