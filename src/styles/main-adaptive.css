@@ -21,6 +21,7 @@
   }
 
   .promo__container {
+    min-height: 484px;
     padding-top: 172px;
     padding-bottom: 60px;
     background-image: url('images/bg-img-notebook.png');
@@ -74,6 +75,7 @@
   }
 
   .promo__container {
+    min-height: 420px;
     padding-top: 157px;
     background-image: url('/images/bg-img-tablet.png');
     background-size: 203px;
@@ -94,13 +96,15 @@
     padding: 80px 0;
   }
 
+  .product__content {
+    gap: 24px;
+  }
+
   .products__title {
     font-size: 36px;
-    margin-bottom: 24px;
   }
 
   .products__list {
-    /* grid-template-columns: repeat(auto-fill, minmax(217px, 1fr)); */
     gap: 16px;
   }
 
@@ -177,7 +181,48 @@
     display: none;
   }
 
+  .header__burger {
+    display: block;
+    /* Показать кнопку-бургер на мобильных устройствах */
+    width: 28px;
+    height: 28px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .header__nav.active {
+    display: flex;
+    /* Показать навигацию при активации бургера */
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    overflow: hidden;
+    inset: 0;
+    height: 100vh;
+    background-color: #6cb9ab;
+  }
+
+  .header__menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 16px;
+    display: block;
+    /* Показать кнопку-бургер на мобильных устройствах */
+    width: 28px;
+    height: 28px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
   .promo__container {
+    min-height: 420px;
     padding-top: 90px;
     padding-bottom: 250px;
     background-image: url('/images/bg-img-mobile.png');
@@ -205,6 +250,7 @@
 
   .product__title {
     font-size: 16px;
+    height: 40px;
   }
 
   .product__image {

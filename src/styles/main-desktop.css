@@ -15,6 +15,7 @@ html {
 }
 
 body {
+  min-width: 320px;
   font-family: 'Inter', sans-serif;
   background-color: #eee;
   font-size: 20px;
@@ -142,6 +143,21 @@ input[type="number"] {
   padding: 10px 4px 3px;
 }
 
+.header__control {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__close-btn {
+  display: none;
+}
+
+.header__burger {
+  display: none;
+  /* Скрыть кнопку-бургер по умолчанию */
+}
+
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 /* $   p r o m o   $   p r o m o   $   p r o m o   $   p r o m o   $   p r o m o      $ */
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
@@ -152,6 +168,7 @@ input[type="number"] {
 }
 
 .promo__container {
+  /* min-height: 600px; */
   padding-top: 210px;
   padding-bottom: 80px;
   background-image: url('/images/bg-img.png');
@@ -197,9 +214,10 @@ input[type="number"] {
 .product {
   display: flex;
   flex-direction: column;
-  background-color: #f2f9f7;
-  min-height: 600px;
   height: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #f2f9f7;
 }
 
 .product__image {
