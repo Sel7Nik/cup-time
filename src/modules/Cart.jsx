@@ -53,10 +53,13 @@ export const Cart = () => {
   }
 
   const totalPrice = cart ? cart.reduce((accum, item) => accum + item.quantity * item.price, 0) : 0
+  // const totalProducts = cart.length
+  const summaryProducts = cart.reduce((accum, item) => item.quantity + accum, 0)
+
   return (
     <section className="cart">
       <div className="container cart__container">
-        <h2 className="cart__title">Корзина ({cart ? cart.length : 0})</h2>
+        <h2 className="cart__title">Корзина ({cart ? summaryProducts : 0})</h2>
 
         <ul className="cart__list">
           {cart ? (

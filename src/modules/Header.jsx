@@ -5,6 +5,9 @@ export const Header = () => {
   const location = useLocation()
   const { cart } = useCart()
 
+  // const totalProducts = cart.length
+  const summaryProducts = cart.reduce((accum, item) => item.quantity + accum, 0)
+
   const getActiveClass = (category) => {
     const currentCategory = new URLSearchParams(location.search).get('category')
     // console.log('category: ', category)
@@ -55,7 +58,7 @@ export const Header = () => {
           </ul>
         </nav>
         <Link className="header__cart-link" to="/cart">
-          {cart ? cart.length : 0}
+          {cart ? summaryProducts : 0}
         </Link>
       </div>
     </header>
